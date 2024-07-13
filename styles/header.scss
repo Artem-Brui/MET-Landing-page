@@ -8,7 +8,7 @@
   padding-top: $header-padding-top;
   position: relative;
 
-// TOP PART of HEADER
+// =================TOP PART of HEADER (Logo and Icons)
   &__top {
     height: $header-height;
     display: flex;
@@ -31,7 +31,7 @@
     gap: 24px;
   }
 
-// BOTTOM PART of HEADER
+// =================BOTTOM PART of HEADER (Title, Menu-Navigation and Menu-Contacts)
   &__bottom {
     text-align: center;
     margin-inline: auto;
@@ -48,7 +48,7 @@
     margin-inline: auto;
   }
 
-// MENU
+// =================MENU (Menu-Navigation and Menu-Contacts)
   &__navigation {
     display: none;
 
@@ -96,7 +96,7 @@
     }
   }
 
-// CHANGING AFTER BurgerMenu CLICK
+// =================CHANGING AFTER BurgerMenu CLICK
   &:has(#navigation:target) {
     background-image: none;
     background-color: $red;
