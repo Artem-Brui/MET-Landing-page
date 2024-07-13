@@ -43,16 +43,14 @@ ul {
   position: relative;
 }
 .header__top {
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .header__bottom {
-  width: calc(100vw - 40px);
   text-align: center;
   margin-inline: auto;
-  position: absolute;
-  top: 200px;
 }
 
 .header__logo {
@@ -94,12 +92,12 @@ ul {
 
 .header__title {
   width: 240px;
-  font-family: Cinzel;
+  text-align: center;
   font-size: 40px;
   line-height: 40px;
   letter-spacing: -1.5px;
   margin-inline: auto;
-  text-align: center;
+  margin-top: 129px;
 }
 
 /*# sourceMappingURL=main.css.map */

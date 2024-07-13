@@ -3,25 +3,22 @@
   height: 568px;
   color: $white;
   background-image: url('../images/image\ 3.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include centred-background;
   padding-inline: $padding-inline;
-  padding-top: 25px;
+  padding-top: $header-padding-top;
   position: relative;
 
+
   &__top {
+    height: $header-height;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   &__bottom {
-    width: calc(100vw - $padding-inline * 2);
     text-align: center;
     margin-inline: auto;
-    position: absolute;
-    top: 200px;
   }
 }
 
@@ -44,9 +41,7 @@
   width: 24px;
   height: 24px;
   display: block;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include centred-background;
 
   &--phone {
     background-image: url('../icons/Icon-Phone-call.png');
@@ -68,10 +63,10 @@
 
 .header__title {
   width: 240px;
-  font-family: Cinzel;
+  text-align: center;
   font-size: 40px;
   line-height: 40px;
   letter-spacing: -1.5px;
   margin-inline: auto;
-  text-align: center;
+  margin-top: 200px - $header-height - $header-padding-top;
 }
