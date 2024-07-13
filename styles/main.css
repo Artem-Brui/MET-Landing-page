@@ -27,7 +27,7 @@ ul {
 
 :root {
   font-family: "Cinzel", serif;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .header {
@@ -48,11 +48,6 @@ ul {
   align-items: center;
   justify-content: space-between;
 }
-.header__bottom {
-  text-align: center;
-  margin-inline: auto;
-}
-
 .header__logo {
   width: 64px;
   text-transform: uppercase;
@@ -61,11 +56,86 @@ ul {
   letter-spacing: -1.5px;
   text-align: center;
 }
-
 .header__list {
   display: flex;
   justify-content: space-between;
   gap: 24px;
+}
+.header__bottom {
+  text-align: center;
+  margin-inline: auto;
+  padding-top: 129px;
+}
+.header__title {
+  display: block;
+  width: 240px;
+  text-align: center;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -1.5px;
+  margin-inline: auto;
+}
+.header__navigation {
+  display: none;
+}
+.header__navigation-item {
+  padding-bottom: 32px;
+  text-align: left;
+}
+.header__navigation-link {
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.header__contacts {
+  display: none;
+}
+.header__contacts-item {
+  text-align: left;
+}
+.header__contacts-item:not(.header__contacts-item:last-child) {
+  font-size: 16px;
+  line-height: 27px;
+}
+.header__contacts-item:last-child {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+}
+.header__contacts-item:nth-child(even) {
+  padding-bottom: 8px;
+}
+.header__contacts-link {
+  color: #fff;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.header:has(#navigation:target) {
+  background-image: none;
+  background-color: #D12D35;
+}
+.header:has(#navigation:target) .header__bottom {
+  padding-top: 40px;
+}
+.header:has(#navigation:target) .header__title {
+  display: none;
+}
+.header:has(#navigation:target) .header__contacts {
+  display: block;
+}
+.header:has(#navigation:target) .header__navigation {
+  display: block;
+}
+.header:target {
+  display: none;
+}
+.header:has(#navigation:target) .icon--burger-menu {
+  display: none;
+}
+.header:has(#navigation:target) .icon--close {
+  display: block;
 }
 
 .icon {
@@ -88,16 +158,6 @@ ul {
 .icon--close {
   background-image: url("../icons/Icon-Close.png");
   display: none;
-}
-
-.header__title {
-  width: 240px;
-  text-align: center;
-  font-size: 40px;
-  line-height: 40px;
-  letter-spacing: -1.5px;
-  margin-inline: auto;
-  margin-top: 129px;
 }
 
 /*# sourceMappingURL=main.css.map */
