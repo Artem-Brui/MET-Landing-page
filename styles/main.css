@@ -1,18 +1,103 @@
-/* Error: Undefined mixin.
- *   ,
- * 6 |   @include centred-background;
- *   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   styles/header.scss 6:3  @import
- *   styles/main.scss 5:9    root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 6 \2502    @include centred-background;\a   \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   styles/header.scss 6:3  @import\a   styles/main.scss 5:9    root stylesheet";
+body,
+header,
+aside,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li,
+div,
+a,
+p,
+img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+:root {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+}
+
+.header {
+  width: 100vw;
+  height: 568px;
+  color: #fff;
+  background-image: url("../images/image 3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-inline: 20px;
+  padding-top: 25px;
+  position: relative;
+}
+.header__top {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__bottom {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.header__logo {
+  width: 64px;
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 23px;
+  letter-spacing: -1.5px;
+  text-align: center;
+}
+
+.header__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.icon--phone {
+  background-image: url("../icons/Icon-Phone-call.png");
+}
+.icon--burger-menu {
+  background-image: url("../icons/Icon-Burger-menu.png");
+}
+.icon--burger-menu:hover {
+  background-image: url("../icons/Icon-Burger-menu-hover.png");
+}
+.icon--close {
+  background-image: url("../icons/Icon-Close.png");
+  display: none;
+}
+
+.header__title {
+  width: 240px;
+  text-align: center;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -1.5px;
+  margin-inline: auto;
+  margin-top: 129px;
+}
+
+/*# sourceMappingURL=main.css.map */
