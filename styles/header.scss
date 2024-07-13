@@ -1,0 +1,77 @@
+.header {
+  width: 100vw;
+  height: 568px;
+  color: $white;
+  background-image: url('../images/image\ 3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-inline: $padding-inline;
+  padding-top: 25px;
+  position: relative;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    width: calc(100vw - $padding-inline * 2);
+    text-align: center;
+    margin-inline: auto;
+    position: absolute;
+    top: 200px;
+  }
+}
+
+.header__logo {
+  width: 64px;
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 23px;
+  letter-spacing: -1.5px;
+  text-align: center;
+}
+
+.header__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &--phone {
+    background-image: url('../icons/Icon-Phone-call.png');
+  }
+
+  &--burger-menu {
+    background-image: url('../icons/Icon-Burger-menu.png');
+
+    &:hover {
+      background-image: url('../icons/Icon-Burger-menu-hover.png');
+    }
+  }
+
+  &--close {
+    background-image: url('../icons/Icon-Close.png');
+    display: none;
+  }
+}
+
+.header__title {
+  width: 240px;
+  font-family: Cinzel;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -1.5px;
+  margin-inline: auto;
+  text-align: center;
+}
