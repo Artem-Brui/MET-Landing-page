@@ -8,6 +8,9 @@ h4,
 h5,
 ul,
 li,
+table,
+td,
+tr,
 div,
 a,
 p,
@@ -115,6 +118,7 @@ ul {
 }
 
 .header {
+  height: 543px;
   color: #fff;
 }
 .header__top {
@@ -233,6 +237,49 @@ ul {
   position: absolute;
   z-index: -1;
   top: 0;
+}
+
+.schedule {
+  display: grid;
+  color: #161616;
+}
+.schedule__advice {
+  color: #D12D35;
+  font-size: 12px;
+}
+.schedule__title {
+  font-size: 32px;
+}
+.schedule__details {
+  margin-top: 32px;
+}
+.schedule__details-title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.schedule__details-table {
+  font-size: 16px;
+  border-collapse: collapse;
+  padding-bottom: 24px;
+}
+.schedule__details-row {
+  height: 27px;
+  border-bottom: 8px solid transparent;
+}
+.schedule__details-row:nth-child(3) {
+  border-bottom: 16px solid transparent;
+}
+.schedule__details-row:nth-last-child(2) {
+  border-bottom: none;
+}
+.schedule__details-row:last-child {
+  font-weight: 400;
+}
+.schedule__details-time {
+  width: fit-content;
+}
+.schedule__details-days {
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=main.css.map */

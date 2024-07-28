@@ -1,0 +1,57 @@
+.schedule {
+  display: grid;
+  color: $black;
+
+  &__advice {
+    color: $red;
+    font-size: 12px;
+  }
+
+  &__title {
+    font-size: 32px;
+  }
+
+  &__details {
+    margin-top: 32px;
+
+    &-title {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    &-table {
+      font-size: 16px;
+      border-collapse: collapse;
+      padding-bottom: 24px;
+    }
+
+    &-row {
+      height: 27px;
+      border-bottom: 8px solid transparent;
+
+      &:nth-child(3) {
+        border-bottom: 16px solid transparent;
+      }
+
+      &:nth-last-child(2) {
+        border-bottom: none;
+      }
+
+      &:last-child {
+        font-weight: 400;
+      }
+
+      
+    }
+
+    &-time {
+      width: fit-content;
+    }
+
+    &-days {
+      font-weight: 400;
+    }
+
+
+  }
+}
