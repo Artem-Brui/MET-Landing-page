@@ -3,7 +3,7 @@
   height: 568px;
   color: $white;
   background-image: url('../images/image\ 3.png');
-  @include centred-background;
+  @include centered-background;
   padding-inline: $padding-inline;
   padding-top: $header-padding-top;
   position: relative;
