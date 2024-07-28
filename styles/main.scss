@@ -1,9 +1,12 @@
-@import '_reset';
-@import '_variables';
-@import '_fonts';
-@import '_mixins';
-@import '_direct-styles';
-@import '_header';
-@import '_icon';
-@import '_section-working-hours.scss';
+//DIRECT STYLES
+@import './direct/_reset';
+@import './direct/_variables';
+@import './direct/_fonts';
+@import './direct/_mixins';
+@import './direct/_direct-styles';
+@import './direct/_icon';
+
+//BLOCKS
+@import './blocks/_header';
+@import './blocks/_section-working-hours.scss';
 

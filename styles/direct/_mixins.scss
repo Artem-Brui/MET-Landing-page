@@ -1,0 +1,34 @@
+@mixin onMobile {
+  @media (max-width: 743px) {
+    @content;
+  }
+}
+@mixin onTablet {
+  @media (min-width: 744px) {
+    @content;
+  }
+}
+@mixin onDesktop {
+  @media (min-width: 1260px) {
+    @content;
+  }
+}
+
+@mixin centered-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin page-margin-inline {
+  @include onMobile {
+    margin-inline: 20px;
+  }
+  @include onTablet() {
+    margin-inline: 72px;
+  }
+  @include onDesktop() {
+    margin-inline: 120px;
+  }
+
+}

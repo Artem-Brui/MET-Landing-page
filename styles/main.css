@@ -30,9 +30,88 @@ ul {
   font-weight: 600;
 }
 
-.header--page-margins {
-  margin-inline: 20px;
-  margin-top: 25px;
+@media (max-width: 743px) {
+  .header--page-margins {
+    margin-inline: 20px;
+  }
+}
+@media (min-width: 744px) {
+  .header--page-margins {
+    margin-inline: 72px;
+  }
+}
+@media (min-width: 1260px) {
+  .header--page-margins {
+    margin-inline: 120px;
+  }
+}
+@media (max-width: 743px) {
+  .header--page-margins {
+    margin-top: 25px;
+  }
+}
+@media (min-width: 744px) {
+  .header--page-margins {
+    margin-top: 50px;
+  }
+}
+@media (min-width: 1260px) {
+  .header--page-margins {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 743px) {
+  .section--page-margins {
+    margin-inline: 20px;
+  }
+}
+@media (min-width: 744px) {
+  .section--page-margins {
+    margin-inline: 72px;
+  }
+}
+@media (min-width: 1260px) {
+  .section--page-margins {
+    margin-inline: 120px;
+  }
+}
+@media (max-width: 743px) {
+  .section--page-margins {
+    margin-top: 100px;
+  }
+}
+@media (min-width: 744px) {
+  .section--page-margins {
+    margin-top: 140px;
+  }
+}
+@media (min-width: 1260px) {
+  .section--page-margins {
+    margin-top: 140px;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.icon--phone {
+  background-image: url("../icons/Icon-Phone-call.png");
+}
+.icon--burger-menu {
+  background-image: url("../icons/Icon-Burger-menu.png");
+}
+.icon--burger-menu:hover {
+  background-image: url("../icons/Icon-Burger-menu-hover.png");
+}
+.icon--close {
+  background-image: url("../icons/Icon-Close.png");
+  display: none;
 }
 
 .header {
@@ -154,28 +233,6 @@ ul {
   position: absolute;
   z-index: -1;
   top: 0;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-  display: block;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.icon--phone {
-  background-image: url("../icons/Icon-Phone-call.png");
-}
-.icon--burger-menu {
-  background-image: url("../icons/Icon-Burger-menu.png");
-}
-.icon--burger-menu:hover {
-  background-image: url("../icons/Icon-Burger-menu-hover.png");
-}
-.icon--close {
-  background-image: url("../icons/Icon-Close.png");
-  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
