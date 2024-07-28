@@ -1,16 +1,10 @@
+
 .header {
-  width: 100vw;
-  height: 568px;
   color: $white;
-  background-image: url('../images/image\ 3.png');
-  @include centered-background;
-  padding-inline: $padding-inline;
-  padding-top: $header-padding-top;
-  position: relative;
 
 // =================TOP PART of HEADER (Logo and Icons)
   &__top {
-    height: $header-height;
+    height: 46px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,7 +29,7 @@
   &__bottom {
     text-align: center;
     margin-inline: auto;
-    padding-top: 200px - $header-height - $header-padding-top;
+    padding-top: 129px;
   }
 
   &__title {
@@ -109,7 +103,7 @@
   }
 
 // =================CHANGING AFTER BurgerMenu CLICK
-  &:has(#navigation:target) {
+  &:has(#navigation:target) + .header-image {
     background-image: none;
     background-color: $red;
   }
@@ -145,27 +139,12 @@
 }
 
 
-
-.icon {
-  width: 24px;
-  height: 24px;
-  display: block;
-  @include centred-background;
-
-  &--phone {
-    background-image: url('../icons/Icon-Phone-call.png');
-  }
-
-  &--burger-menu {
-    background-image: url('../icons/Icon-Burger-menu.png');
-
-    &:hover {
-      background-image: url('../icons/Icon-Burger-menu-hover.png');
-    }
-  }
-
-  &--close {
-    background-image: url('../icons/Icon-Close.png');
-    display: none;
-  }
+.header-image {
+  width: 100vw;
+  height: 568px;
+  background-image: url('../images/image-3.png');
+  @include centered-background;
+  position: absolute;
+  z-index: -1;
+  top: 0;
 }
