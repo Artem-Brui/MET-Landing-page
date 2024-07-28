@@ -64,6 +64,12 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       color: $white;
+
+      &:hover {
+        width: fit-content;
+        border-bottom: 1px solid $white;
+        padding-bottom: 2px;
+      }
     }
   }
 
@@ -85,6 +91,12 @@
       }
 
       &:nth-child(even) {
+        padding-bottom: 8px;
+      }
+
+      &:last-child:hover {
+        width: fit-content;
+        border-bottom: 1px solid $white;
         padding-bottom: 8px;
       }
     }
