@@ -245,7 +245,7 @@ ul {
 }
 @media (max-width: 743px) {
   .hours {
-    grid-template: repeat(3, 1fr)/1fr;
+    grid-template: auto repeat(2, 1fr)/1fr;
   }
 }
 @media (min-width: 744px) {
