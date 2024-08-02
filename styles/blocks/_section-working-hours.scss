@@ -37,7 +37,11 @@
     }
 
     &-title {
-      font-size: 32px;
+      @include onMobile {
+        font-size: 32px;
+      }
+      
+      font-size: 48px;
       white-space: nowrap;
 
       @include onTablet {

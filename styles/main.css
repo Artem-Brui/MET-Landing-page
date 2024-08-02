@@ -33,6 +33,9 @@ ul {
   font-weight: 700;
 }
 
+.header--page-margins {
+  margin-top: 50px;
+}
 @media (max-width: 743px) {
   .header--page-margins {
     margin-inline: 20px;
@@ -53,17 +56,10 @@ ul {
     margin-top: 25px;
   }
 }
-@media (min-width: 744px) {
-  .header--page-margins {
-    margin-top: 50px;
-  }
-}
-@media (min-width: 1260px) {
-  .header--page-margins {
-    margin-top: 50px;
-  }
-}
 
+.section--page-margins {
+  margin-top: 140px;
+}
 @media (max-width: 743px) {
   .section--page-margins {
     margin-inline: 20px;
@@ -82,16 +78,6 @@ ul {
 @media (max-width: 743px) {
   .section--page-margins {
     margin-top: 100px;
-  }
-}
-@media (min-width: 744px) {
-  .section--page-margins {
-    margin-top: 140px;
-  }
-}
-@media (min-width: 1260px) {
-  .section--page-margins {
-    margin-top: 140px;
   }
 }
 
@@ -230,7 +216,7 @@ ul {
 .header-image {
   width: 100vw;
   height: 568px;
-  background-image: url("../images/image-3.png");
+  background-image: url("../images/header-background.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -282,8 +268,13 @@ ul {
   font-size: 12px;
 }
 .hours__heading-title {
-  font-size: 32px;
+  font-size: 48px;
   white-space: nowrap;
+}
+@media (max-width: 743px) {
+  .hours__heading-title {
+    font-size: 32px;
+  }
 }
 @media (min-width: 744px) {
   .hours__heading-title {

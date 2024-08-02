@@ -139,11 +139,14 @@
 
 }
 
-
+// Use independent div with header background for save opportunity 
+// apply external margins to BEM block (this case this is a header).
+// Otherwise, with using padding inside header-BEM is not possible
+// to get full width with this picture (or another background).
 .header-image {
   width: 100vw;
   height: 568px;
-  background-image: url('../images/image-3.png');
+  background-image: url('../images/header-background.webp');
   @include centered-background;
   position: absolute;
   z-index: -1;
