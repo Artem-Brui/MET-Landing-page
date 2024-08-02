@@ -2,4 +2,14 @@
 :root {
   font-family: "Cinzel", serif;
   font-weight: 700;
+  color: $black;
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 48px;
+
+  @include onMobile {
+    font-size: 32px;
+  }
 }

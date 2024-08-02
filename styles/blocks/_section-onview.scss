@@ -1,0 +1,132 @@
+.onview {
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 48px;
+
+    &-title {
+      letter-spacing: -1.5px;
+      margin-bottom: 8px;
+    }
+
+    &-descreption {
+      max-width: 400px;
+      margin-inline: auto;
+      font-weight: 400;
+      line-height: 27px;
+
+      @include onDesktop {
+        max-width: 350px;
+      }
+    }
+  }
+
+  &__article {
+    margin-bottom: 48px;
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+
+    &-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(87px, 1fr));
+      column-gap: 24px;
+      margin-bottom: 24px;
+
+      @include onMobile {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 8px;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-details {
+      line-height: 27px;
+    }
+
+    &-title {
+      color: $red;
+    }
+
+    &-period {
+      font-weight: 400;
+    }
+  }
+
+  &__image-container {
+    overflow: hidden;
+  }
+
+
+  &__button {
+    width: 324px;
+    height: 56px;
+    display: block;
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    line-height: 27px;
+    color: $white;
+    font-size: 16px;
+    background-color: $red;
+    margin-inline: auto;
+
+    @include onMobile {
+      width: 100%;
+    }
+
+    @include onTablet {
+      width: 392px;
+    }
+  }
+}
+
+
+.image-wider-start {
+  grid-template-columns: 1fr calc(100vw * .25);
+
+    @include onMobile {
+      grid-template: minmax(130px, calc(100vw * .25)) / minmax(130px, 1fr) minmax(130px, 25%);
+      column-gap: 20px;
+    }
+}
+
+.image-wider-end {
+  grid-template-columns: calc(100vw * .25) 1fr;
+
+    @include onMobile {
+      grid-template: minmax(130px, calc(100vw * .25)) / minmax(130px, 25%) minmax(130px, 1fr);
+      column-gap: 20px;
+    }
+}
+
+// this "id" used in the first image of gallery for centring text while size is smallest.
+#old-masters-image-with-text {
+  @include onMobile {
+    object-position: 19% 20%;
+    scale: 1.35;
+  }
+}
+
+// this "id" used in the last image of gallery for moved image to the rigth side while size is smallest.
+#disney-image {
+  @include onMobile {
+    object-position: right;
+  }
+}
+
+// this "id" used in the second image-container of gallery for hidding it onTablet.
+#hidden-image-on-tablet {
+  @include onTablet {
+    display: none;
+  }
+
+  @include onDesktop {
+    display: block;
+  }
+}
