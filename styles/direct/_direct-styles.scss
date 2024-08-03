@@ -1,4 +1,4 @@
-.header--page-margins {
+.header-margins {
   @include page-margin-inline;
   @include onMobile {
     margin-top: 25px;

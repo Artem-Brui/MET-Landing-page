@@ -41,26 +41,26 @@ button {
   font-size: 16px;
 }
 
-.header--page-margins {
+.header-margins {
   margin-top: 50px;
 }
 @media (max-width: 743px) {
-  .header--page-margins {
+  .header-margins {
     margin-inline: 20px;
   }
 }
 @media (min-width: 744px) {
-  .header--page-margins {
+  .header-margins {
     margin-inline: 72px;
   }
 }
 @media (min-width: 1260px) {
-  .header--page-margins {
+  .header-margins {
     margin-inline: 120px;
   }
 }
 @media (max-width: 743px) {
-  .header--page-margins {
+  .header-margins {
     margin-top: 25px;
   }
 }
@@ -371,6 +371,7 @@ button {
   margin-inline: auto;
   font-weight: 400;
   line-height: 27px;
+  text-align: center;
 }
 @media (min-width: 1260px) {
   .onview__heading-descreption {
@@ -461,17 +462,16 @@ button {
     width: 392px;
   }
 }
-
-.container {
+.onview__container {
   overflow: hidden;
 }
 @media (min-width: 744px) {
-  .container--hidden-on-tablet {
+  .onview__container--hidden-on-tablet {
     display: none;
   }
 }
 @media (min-width: 1260px) {
-  .container--hidden-on-tablet {
+  .onview__container--hidden-on-tablet {
     display: block;
   }
 }
