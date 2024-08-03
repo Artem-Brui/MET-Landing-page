@@ -247,7 +247,7 @@ h3 {
 }
 @media (max-width: 743px) {
   .hours {
-    grid-template: auto repeat(2, 1fr)/1fr;
+    grid-template: repeat(3, auto)/1fr;
   }
 }
 @media (min-width: 744px) {

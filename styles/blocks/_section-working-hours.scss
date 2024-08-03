@@ -2,7 +2,7 @@
   display: grid;
 
   @include onMobile {
-    grid-template: auto repeat(2, 1fr) / 1fr;
+    grid-template: repeat(3, auto) / 1fr;
   }
 
   @include onTablet {
