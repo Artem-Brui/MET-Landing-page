@@ -9,8 +9,12 @@ h5,
 ul,
 li,
 table,
+input,
+form,
+textarea,
 td,
 tr,
+address,
 div,
 a,
 p,
@@ -29,7 +33,20 @@ ul {
   list-style-type: none;
 }
 
-button {
+button,
+input,
+textarea {
   border: none;
   cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: none;
+  outline: none;
 }
