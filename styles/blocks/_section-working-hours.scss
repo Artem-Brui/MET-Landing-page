@@ -36,6 +36,7 @@
     }
 
     &-title {
+      text-align: start;
       white-space: nowrap;
 
       @include onTablet {

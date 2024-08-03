@@ -1,11 +1,9 @@
 .onview {
 
   &__heading {
-    text-align: center;
     margin-bottom: 48px;
 
     &-title {
-      letter-spacing: -1.5px;
       margin-bottom: 8px;
     }
 
@@ -17,6 +15,7 @@
 
       @include onDesktop {
         max-width: 350px;
+        text-align: center;
       }
     }
   }

@@ -6,10 +6,20 @@
   margin-top: 50px;
 }
 
-.section--page-margins {
+.section-margins {
   @include page-margin-inline;
   @include onMobile {
     margin-top: 100px;
   }
   margin-top: 140px;
+}
+
+.section-title {
+  font-size: 48px;
+  text-align: center;
+  letter-spacing: -1.5px;
+
+  @include onMobile {
+    font-size: 32px;
+  }
 }
