@@ -51,7 +51,10 @@
 
 
   &__schedule {
-    margin-bottom: 24px;
+
+    &:not(&:last-child) {
+      margin-bottom: 24px;
+    }
 
     &:nth-of-type(1) {
       @include onMobile {

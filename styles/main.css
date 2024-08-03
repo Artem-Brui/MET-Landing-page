@@ -297,7 +297,7 @@ h3 {
     white-space: nowrap;
   }
 }
-.hours__schedule {
+.hours__schedule:not(.hours__schedule:last-child) {
   margin-bottom: 24px;
 }
 @media (max-width: 743px) {
