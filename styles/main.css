@@ -394,10 +394,39 @@ h3 {
     gap: 8px;
   }
 }
+.onview__article-gallery--wider-start {
+  grid-template-columns: 1fr 25vw;
+}
+@media (max-width: 743px) {
+  .onview__article-gallery--wider-start {
+    grid-template: minmax(130px, 25vw)/minmax(130px, 1fr) minmax(130px, 25%);
+    column-gap: 20px;
+  }
+}
+.onview__article-gallery--wider-end {
+  grid-template-columns: 25vw 1fr;
+}
+@media (max-width: 743px) {
+  .onview__article-gallery--wider-end {
+    grid-template: minmax(130px, 25vw)/minmax(130px, 25%) minmax(130px, 1fr);
+    column-gap: 20px;
+  }
+}
 .onview__article-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media (max-width: 743px) {
+  .onview__article-image--align-rigth-onMobile {
+    object-position: right;
+  }
+}
+@media (max-width: 743px) {
+  .onview__article-image--align-centred-text {
+    object-position: 19% 20%;
+    scale: 1.35;
+  }
 }
 .onview__article-details {
   line-height: 27px;
@@ -407,9 +436,6 @@ h3 {
 }
 .onview__article-period {
   font-weight: 400;
-}
-.onview__image-container {
-  overflow: hidden;
 }
 .onview__button {
   width: 324px;
@@ -434,46 +460,16 @@ h3 {
   }
 }
 
-.image-wider-start {
-  grid-template-columns: 1fr 25vw;
+.container {
+  overflow: hidden;
 }
-@media (max-width: 743px) {
-  .image-wider-start {
-    grid-template: minmax(130px, 25vw)/minmax(130px, 1fr) minmax(130px, 25%);
-    column-gap: 20px;
-  }
-}
-
-.image-wider-end {
-  grid-template-columns: 25vw 1fr;
-}
-@media (max-width: 743px) {
-  .image-wider-end {
-    grid-template: minmax(130px, 25vw)/minmax(130px, 25%) minmax(130px, 1fr);
-    column-gap: 20px;
-  }
-}
-
-@media (max-width: 743px) {
-  #old-masters-image-with-text {
-    object-position: 19% 20%;
-    scale: 1.35;
-  }
-}
-
-@media (max-width: 743px) {
-  #disney-image {
-    object-position: right;
-  }
-}
-
 @media (min-width: 744px) {
-  #hidden-image-on-tablet {
+  .container--hidden-on-tablet {
     display: none;
   }
 }
 @media (min-width: 1260px) {
-  #hidden-image-on-tablet {
+  .container--hidden-on-tablet {
     display: block;
   }
 }
