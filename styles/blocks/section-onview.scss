@@ -1,5 +1,4 @@
 .onview {
-
   &__heading {
     margin-bottom: 48px;
 
@@ -14,7 +13,7 @@
       line-height: 27px;
       text-align: center;
 
-      @include onDesktop {
+      @include on-desktop {
         max-width: 350px;
         text-align: center;
       }
@@ -34,25 +33,33 @@
       column-gap: 24px;
       margin-bottom: 24px;
 
-      @include onMobile {
+      @include on-mobile {
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
         gap: 8px;
       }
 
       &--wider-start {
-        grid-template-columns: 1fr calc(100vw * .25);
-        @include onMobile {
-          grid-template: minmax(130px, calc(100vw * .25)) / minmax(130px, 1fr) minmax(130px, 25%);
+        grid-template-columns: 1fr calc(100vw * 0.25);
+
+        @include on-mobile {
+          grid-template: minmax(130px, calc(100vw * 0.25)) / minmax(130px, 1fr) minmax(
+              130px,
+              25%
+            );
           column-gap: 20px;
         }
       }
 
       &--wider-end {
-        grid-template-columns: calc(100vw * .25) 1fr;
-        @include onMobile {
-          grid-template: minmax(130px, calc(100vw * .25)) / minmax(130px, 25%) minmax(130px, 1fr);
+        grid-template-columns: calc(100vw * 0.25) 1fr;
+
+        @include on-mobile {
+          grid-template: minmax(130px, calc(100vw * 0.25)) / minmax(130px, 25%) minmax(
+              130px,
+              1fr
+            );
           column-gap: 20px;
-    }
+        }
       }
     }
 
@@ -61,14 +68,14 @@
       height: 100%;
       object-fit: cover;
 
-      &--align-rigth-onMobile {
-        @include onMobile {
+      &--align-rigth-on-mobile {
+        @include on-mobile {
           object-position: right;
         }
       }
 
       &--align-centred-text {
-        @include onMobile {
+        @include on-mobile {
           object-position: 19% 20%;
           scale: 1.35;
         }
@@ -92,7 +99,7 @@
     width: 324px;
     height: 56px;
     display: block;
-    font-family: "Cinzel", serif;
+    font-family: Cinzel, serif;
     font-weight: 700;
     line-height: 27px;
     color: $white;
@@ -100,12 +107,11 @@
     background-color: $red;
     margin-inline: auto;
 
-
-    @include onMobile {
+    @include on-mobile {
       width: 100%;
     }
 
-    @include onTablet {
+    @include on-tablet {
       width: 392px;
     }
   }
@@ -113,15 +119,14 @@
   &__container {
     overflow: hidden;
 
-  &--hidden-on-tablet {
-    @include onTablet {
-      display: none;
+    &--hidden-on-tablet {
+      @include on-tablet {
+        display: none;
+      }
+
+      @include on-desktop {
+        display: block;
+      }
     }
-  
-    @include onDesktop {
-      display: block;
-    }
-  }
   }
 }
-

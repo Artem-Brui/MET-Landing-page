@@ -1,12 +1,12 @@
 .footer {
   width: 100%;
-  height: 359px; 
-  background-image: url('../../images/footer-background.webp');
+  height: 359px;
+  background-image: url('../images/footer-background.webp');
   background-repeat: no-repeat;
   background-position: 63% 0;
   background-size: cover;
 
-  @include onMobile {
+  @include on-mobile {
     height: 180px;
     background-position: 50% 0;
   }

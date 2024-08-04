@@ -1,16 +1,20 @@
 .header-margins {
   @include page-margin-inline;
-  @include onMobile {
+
+  @include on-mobile {
     margin-top: 25px;
   }
+
   margin-top: 50px;
 }
 
 .section-margins {
   @include page-margin-inline;
-  @include onMobile {
+
+  @include on-mobile {
     margin-top: 100px;
   }
+
   margin-top: 140px;
 }
 
@@ -19,7 +23,7 @@
   text-align: center;
   letter-spacing: -1.5px;
 
-  @include onMobile {
+  @include on-mobile {
     font-size: 32px;
   }
 }

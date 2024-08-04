@@ -1,11 +1,10 @@
 .more {
-
   &__container {
     display: grid;
     grid-template: repeat(3, auto) / 1fr;
     gap: 48px;
 
-    @include onDesktop {
+    @include on-desktop {
       grid-template: 1fr / repeat(auto-fit, minmax(324px, auto));
       gap: 24px;
     }
@@ -17,10 +16,11 @@
     margin-bottom: 48px;
     margin-inline: auto;
 
-    @include onMobile {
+    @include on-mobile {
       margin-bottom: 40px;
     }
-    @include onDesktop {
+
+    @include on-desktop {
       width: 450px;
     }
   }
@@ -32,7 +32,7 @@
     margin-inline: auto;
     text-align: center;
 
-    @include onDesktop {
+    @include on-desktop {
       min-width: 324px;
     }
 
@@ -40,7 +40,7 @@
       width: 100%;
       margin-bottom: 32px;
 
-      @include onMobile {
+      @include on-mobile {
         margin-bottom: 24px;
       }
     }
@@ -57,5 +57,4 @@
       line-height: 27px;
     }
   }
-
 }

@@ -1,19 +1,16 @@
-@mixin onLessMobile {
-  @media (max-width: 319px) {
-    @content;
-  }
-}
-@mixin onMobile {
+@mixin on-mobile {
   @media (max-width: 743px) {
     @content;
   }
 }
-@mixin onTablet {
+
+@mixin on-tablet {
   @media (min-width: 744px) {
     @content;
   }
 }
-@mixin onDesktop {
+
+@mixin on-desktop {
   @media (min-width: 1260px) {
     @content;
   }
@@ -26,14 +23,15 @@
 }
 
 @mixin page-margin-inline {
-  @include onMobile {
+  @include on-mobile {
     margin-inline: 20px;
   }
-  @include onTablet() {
+
+  @include on-tablet {
     margin-inline: 72px;
   }
-  @include onDesktop() {
+
+  @include on-desktop {
     margin-inline: 120px;
   }
-
 }
