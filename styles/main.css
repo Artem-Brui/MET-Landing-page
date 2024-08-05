@@ -32,6 +32,10 @@ img {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }
@@ -282,7 +286,7 @@ textarea {
 }
 .header-image {
   width: 100vw;
-  height: 593px;
+  height: 100vh;
   background-image: url("../images/header-background.webp");
   background-repeat: no-repeat;
   background-size: cover;
@@ -293,11 +297,13 @@ textarea {
 }
 
 #navigation-menu-on:target + .header {
+  height: 90vh;
   position: fixed;
   z-index: 2;
   left: 0;
   right: 0;
   top: 0;
+  overflow-y: auto;
 }
 
 #navigation-menu-on:target ~ .hours {
@@ -309,6 +315,11 @@ textarea {
   background-color: #d12d35;
   position: fixed;
   z-index: 2;
+}
+@media (min-width: 1260px) {
+  #navigation-menu-on:target {
+    height: 700px;
+  }
 }
 
 #navigation-menu-on:target + .header .header__bottom {
@@ -330,6 +341,10 @@ textarea {
 }
 
 #navigation-menu-on:target + .header .icon--burger-menu {
+  display: none;
+}
+
+#navigation-menu-on:target + .header .icon--phone {
   display: none;
 }
 
@@ -582,6 +597,7 @@ textarea {
 }
 .onview__container {
   overflow: hidden;
+  transition: scale 500ms;
 }
 @media (min-width: 744px) {
   .onview__container--hidden-on-tablet {
