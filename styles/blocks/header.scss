@@ -7,22 +7,6 @@
   &__contacts {
     display: none;
 
-    &:hover {
-      @include contacts-position-hover;
-
-      & .header__contacts-list {
-        text-align: right;
-      }
-
-      & .header__contacts-item:last-child {
-        display: none;
-      }
-
-      & .header__contacts-link {
-        @include contacts-font-size-hover-mobile;
-      }
-    }
-
     &-list {
       text-align: left;
     }
@@ -56,6 +40,22 @@
 
       &:hover {
         @include link-white-underline-hover;
+      }
+    }
+
+    &:hover {
+      @include contacts-position-hover;
+
+      & .header__contacts-list {
+        text-align: right;
+      }
+
+      & .header__contacts-item:last-child {
+        display: none;
+      }
+
+      & .header__contacts-link {
+        @include contacts-font-size-hover-mobile;
       }
     }
   }
@@ -161,11 +161,6 @@
 
 // =================CHANGING AFTER BurgerMenu CLICK
 
-#navigation-menu-on:target {
-  position: fixed;
-  z-index: 2;
-}
-
 #navigation-menu-on:target + .header {
   position: fixed;
   z-index: 2;
@@ -181,6 +176,8 @@
 #navigation-menu-on:target {
   background-image: none;
   background-color: $red;
+  position: fixed;
+  z-index: 2;
 }
 
 #navigation-menu-on:target + .header .header__bottom {
