@@ -31,15 +31,17 @@ $black: #161616;
 
 
   // CONTENT-WIDTH
-  @media (max-width: 1259px) {
+  @media (max-width: 1499px) {
     --page-content-width: calc(100vw - (var(--page-margin) * 2));
   }
-  
-  @media (min-width: 1260px) {
-    --page-content-width: calc(1260px - (var(--page-margin) * 2));
+
+  @media (min-width: 1500px) {
+    --page-content-width: calc(1500px - (var(--page-margin) * 2));
   }
 
   // --------------
+
+  --phone-hover: 0;
 }
 
 $page-content-width: var(--page-content-width);

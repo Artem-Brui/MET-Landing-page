@@ -30,31 +30,82 @@
 }
 
 @mixin contacts-position-hover {
-  display: block;
-  position: absolute;
   z-index: 3;
-  top: 0;
+  top: -31px;
   right: 71px;
+  left: auto;
+  bottom: auto;
   padding-right: 25px;
 
-  @media (max-width: 410px) {
-    top: 23px;
-    right: 0;
-    padding-top: 25px;
-    padding-right: 0;
+  @include on-mobile {
+    top: -29px;
+
+    @media (max-width: 410px) {
+      top: 23px;
+      right: 0;
+      padding-top: 25px;
+      padding-right: 0;
+    }
   }
+
+
 }
 
 @mixin contacts-font-size-hover-mobile {
+  padding: 1px;
   @media (max-width: 410px) {
     font-size: 12px;
     line-height: 0;
   }
 }
 
-@mixin link-white-underline-hover {
-  width: fit-content;
-  border-bottom: 1px solid $white;
-  padding-bottom: 2px;
+@mixin underline-hover-header {
+  & {
+    position: relative;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: $white;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 500ms;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
 }
 
+@mixin underline-hover-contacts {
+  & span {
+    display: inline-block;
+    position: relative;
+  }
+
+  & span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: $black;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 500ms;
+  }
+
+  &:hover span::before {
+    transform: scaleX(1);
+  }
+}
+
+@mixin transition-hidding {
+  transition: opacity 1000ms;
+}
